@@ -1,0 +1,29 @@
+body {
+  padding-top: 50px;
+}
+
+#monitor {
+	text-align: center;
+}
+
+#monitor img {
+	border: 5px solid grey;
+}
+
+#monitor img.playing {
+	border-color: green;
+}
+
+#monitor form input[type="radio"] {
+	margin: 0 10px;
+}
+
+#monitor form :checked {
+	background-color: black;
+	color: white;
+}
+
+#monitor form .slider {
+	margin: 0 30px;
+}
+

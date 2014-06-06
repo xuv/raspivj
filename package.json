@@ -1,0 +1,10 @@
+{
+  "name": "RasPiVJ",
+  "version": "0.0.1",
+  "description": "Interface for the RasPiVJ video player",
+  "dependencies": {
+    "express": "~4.4.1",
+    "osc": "^1.0.1",
+    "serialport": "^1.4.0"
+  }
+}
