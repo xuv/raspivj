@@ -37,12 +37,11 @@
           </button>
           <a class="navbar-brand" href="#">RaspiVJ</a>
         </div>
-        <!--
         <div class="collapse navbar-collapse">	
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a id="start" title="Start video player?" href="#">Start video</a></li>
+            <li><a id="exit" title="Stop video player?" href="#">Stop video</a></li>
+            <li><a id="shutdown" title="Shutdown Raspberry Pi?" href="#">Shutdown</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -125,12 +124,23 @@
 				address: "/player" + $('#monitor form input:checked').val() ,
 				args: [ parseFloat( $(this).attr('id').substr(4) ) ]
 			}
-		console.log($(this).attr('id').substr(4));
-		console.log(message.args[0]);
+		//console.log($(this).attr('id').substr(4));
+		//console.log(message.args[0]);
 		  $(this).attr('id');
 		  socket.emit('message', message);
 		  //console.log(message);
 		  });
+		  
+	  $('.nav a').click(function(){
+		  var message = {
+				address: "/" + $(this).attr('id') ,
+				args: [ 1 ]
+		  }
+		  if( confirm( $(this).attr('title') ) ) {
+			 socket.emit('message', message);
+	      }
+		  
+	  });
 	</script>
   </body>
 </html>
