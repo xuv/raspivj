@@ -1,0 +1,5 @@
+# User crontab for for the RasPiVJ
+
+# This line will automatically start node server at start up
+@reboot /usr/local/bin/node ~/raspivj/raspivj.js > raspivj.log
+
