@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+	include header
+
+	body
+		include navigation
+
+		.container
+			#monitor.row
+				img#player0.playing(src="320x240.gif")
+				img#player1.playing(src="320x240.gif")
+		
+				input#black(type="text", class="slider span1", value="", data-slider-min="0", data-slider-max="255", data-slider-step="1", data-slider-value="0", data-slider-orientation="vertical", data-slider-selection="after", data-slider-tooltip="hide")
+			
+				form
+					input(type="radio", name="player", value="0", checked)
+					label Player0
+					input#alpha(type="text", class="slider span1", value="", data-slider-min="0", data-slider-max="255", data-slider-step="1", data-slider-value="0", data-slider-orientation="horizontal", data-slider-selection="after", data-slider-tooltip="hide")
+					input(type="radio", name="player", value="1")
+					label Player1
+			
+			.row
+				div
+					ul#clips
+						for clip, index in clips
+							include clip
+			
+
+		// --JAVASCRIPT -------------------------------
+		script(src="/socket.io/socket.io.js")
+		script(src="./jquery-1.11.1.min.js")
+		script(src="./js/bootstrap.min.js")
+		script(src="./js/bootstrap-slider.js")
+		script(src="./js/raspivj.js")
+
+
