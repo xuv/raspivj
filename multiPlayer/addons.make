@@ -1,0 +1,2 @@
+ofxOMXPlayer
+ofxOsc
