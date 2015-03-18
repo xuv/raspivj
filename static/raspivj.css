@@ -4,6 +4,9 @@ body {
 
 #monitor {
 	text-align: center;
+    min-height: 320px;
+    max-height: 320px;
+    height: 320px;
 }
 
 #monitor img {
@@ -39,5 +42,9 @@ body {
 #clips li a img {
 	width: 100%;
 	height: 100%;
+}
+
+.slider.slider-vertical {
+    margin: 15px 0px;
 }
 
