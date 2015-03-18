@@ -3,6 +3,8 @@ RasPiVJ
 
 Turn the Raspberry Pi into a lightweight VJ plateform.
 
+![screenshot](https://raw.githubusercontent.com/xuv/RasPiVJ/master/screenshot.png)
+
 **Please note that this is in an early stage (alpha), so it lacks functionnality and might require patience to get it working. 
 But I'll be happy to reply to your issues and help you in the best I can.**
 
@@ -51,7 +53,7 @@ Julien Deswaef @xuv
 TODO
 ----
 - Make an external config file for setting up the video folder
-- Rework the web interface
+- Rework the web interface (add icons,…)
 - Add shaders
 
 Video examples
