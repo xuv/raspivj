@@ -3,7 +3,8 @@ var multiPlayerAddress = "127.0.0.1";
 //var multiPlayerAddress = "192.168.1.30";
 var multiPlayerPort = 40000;
 
-var videoFolder = "laob"; // the folder should be in the /home/pi user directory, at the same level as the raspivj/ directory
+// the folder should be in the /home/pi user directory, at the same level as the raspivj/ directory
+var videoFolder = "videos"; 
 
 // Necessary for calling shell scripts
 // http://valler.ca/nodejs-execute-a-shell-script-command/
@@ -18,7 +19,7 @@ var express = require('express');
 
 // Dummy users
 var clips = [];
-clips = fs.readdirSync(__dirname + '/../' + videoFolder + '/thumb');
+clips = fs.readdirSync(__dirname + '/../' + videoFolder + '/thumbs');
 clips.sort();
 
 var app = express();
@@ -70,7 +71,7 @@ app.use(function(err, req, res, next) {
 // Make whatever is in the /static folder available
 app.use(express.static( __dirname + '/static'));
 // Have the video thumbs available
-app.use('/thumb', express.static(__dirname + '/../'+ videoFolder + '/thumb'));
+app.use('/thumbs', express.static(__dirname + '/../'+ videoFolder + '/thumbs'));
 
 
 io.on('connection', function (socket) {
