@@ -19,7 +19,7 @@ var express = require('express');
 
 // Dummy users
 var clips = [];
-clips = fs.readdirSync(__dirname + '/../' + videoFolder + '/thumbs');
+clips = fs.readdirSync(__dirname + '/' + videoFolder + '/thumbs');
 clips.sort();
 
 var app = express();
@@ -71,7 +71,7 @@ app.use(function(err, req, res, next) {
 // Make whatever is in the /static folder available
 app.use(express.static( __dirname + '/static'));
 // Have the video thumbs available
-app.use('/thumbs', express.static(__dirname + '/../'+ videoFolder + '/thumbs'));
+app.use('/thumbs', express.static(__dirname + '/' + videoFolder + '/thumbs'));
 
 
 io.on('connection', function (socket) {

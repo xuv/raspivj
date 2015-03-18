@@ -26,7 +26,7 @@ void multiPlayer::setup()
 	index0 = 0;
 	index1 = 1;
 
-	ofDirectory currentVideoDirectory(ofToDataPath("/home/pi/videos", true));
+	ofDirectory currentVideoDirectory(ofToDataPath("/home/pi/raspivj/videos", true));
 	if (currentVideoDirectory.exists()) 
 	{
 		currentVideoDirectory.listDir();
